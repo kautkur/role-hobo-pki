@@ -1,0 +1,18 @@
+---
+domain_name: "{{ inventory_hostname }}"
+domain_workdir: "host_files/{{ domain_name }}"
+openssl_config: "/tmp/openssl-{{ inventory_hostname }}.conf"
+
+ssl:
+  country: CA
+  state: Ontario
+  locality: Warkworth
+  organization: Kautkur
+  organization_unit: Hicksville
+  common_name: "{{ domain_name }}"
+
+# sans:
+#   - www.mydomain.com
+#   - www.mydomein.com
+#   - www.anotheronetoo.com
+
